@@ -1,0 +1,10 @@
+server:
+  port: 8089
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5400/homework
+    username: aturin
+    password: aturin
+  jpa:
+    generate-ddl: true
