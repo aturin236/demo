@@ -1,0 +1,16 @@
+services:
+  postgres:
+    container_name: localPostgresSQLDB
+    image: 'postgres:latest'
+    environment:
+      - 'POSTGRES_DB=userservice_db'
+      - 'POSTGRES_PASSWORD=12345'
+      - 'POSTGRES_USER=postgres'
+    ports:
+      - '5432:5432'
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 1G
